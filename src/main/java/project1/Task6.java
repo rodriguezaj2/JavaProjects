@@ -3,25 +3,24 @@ package project1;
 public class Task6 {
     public static void main(String[] args) {
 
-        double number=7;
+        boolean prime = true;
+        int number = 7;
 
-        if(number<1||number==2||number==3){
-            System.out.println("Not prime");
+        if (number <= 1) {
+            System.out.println("Not Prime");
+        } else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    prime = false;
 
-        }
-        for(int i=0; i<Math.sqrt(number);i++){
-            if(number%2!=0&&number%3!=0&&number%5!=0){
-                System.out.println("Prime");
-                break;
-
-            }else{
-                System.out.println("Not Prime");
-                break;
+                }
             }
         }
-
+        if (prime) {
+            System.out.println(number + " is prime");
+        } else {
+            System.out.println(number + " is not prime");
+        }
     }
 }
-/*
-6. Write a java program to check whether a given number is prime or not?
- */
+ //Write a java program to check whether a given number is prime or not?

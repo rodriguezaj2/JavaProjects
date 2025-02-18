@@ -3,28 +3,26 @@ package project1;
 public class Task1 {
     public static void main(String[] args) {
 
-        int[] weeklyTemps = {70, 75, 76, 60, 80, 83, 87};
+        int [] weeklyTemps={78,73,79,80,81,80,79};
 
-        int max = weeklyTemps[0];
-        int min = weeklyTemps[0];
+        int maxTemp=weeklyTemps[0];
+        int minTemp=weeklyTemps[0];
 
+        for(int dailyTemps:weeklyTemps){
+            if(dailyTemps>maxTemp){
+                maxTemp=dailyTemps;
 
-        for (int dailyTemps : weeklyTemps) {
-            if (dailyTemps > max) {
-                max = dailyTemps;
-
+            } else if (dailyTemps<minTemp) {
+                minTemp=dailyTemps;
             }
-            if (dailyTemps < min) {
-                min = dailyTemps;
-            }
-
         }
-        System.out.println(max);
-        System.out.println(min);
+        System.out.println(maxTemp+" is highest temperature");
+        System.out.println(minTemp+" is lowest temperature");
+
     }
 }
 
 /*
-Create a program that uses an array to store a list of temperatures for a week, and then uses a loop
-to find the highest and lowest temperature for the week.
+Create a program that uses an array to store a list of temperatures for a week,
+and then uses a loop to find the highest and lowest temperature for the week.
  */
